@@ -59,8 +59,9 @@ html,body {
 /* конкретний слайдер */
 .slider {
     position: relative;
-    padding: 0px 50px;
+    padding: 0px 100px;
 }
+
 .slider .slick-arrow {
     position: absolute;
     top: 50%;
