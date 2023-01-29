@@ -26,15 +26,6 @@ html,body {
 /* Слайдер з точками */
 .slick-slider.slick-dotted{}
 /* границя */
-.slick-list {
-    overflow: hidden;
-}
-/* Лента слайдів */
-.slick-track{
-    display: flex;
-    /* притисне наші слайди до верху */
-    align-items: flex-start;
-}
 /* Слайд */
 .slick-slide{}
 /* Слайд активний (показується) */
@@ -55,6 +46,16 @@ html,body {
 .slick-dots li.slick-active{}
 /* Елемент точки */
 .slick-dots li button{}
+
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдів */
+.slick-track{
+    display: flex;
+    /* притисне наші слайди до верху */
+    align-items: flex-start;
+}
 
 
 /* конкретний слайдер */
