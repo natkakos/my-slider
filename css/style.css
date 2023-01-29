@@ -21,45 +21,40 @@ html,body {
 
 /* Слайдер */
 .slick-slider{}
-/* Слайдер запущен */
+/* Слайдер запущений */
 .slick-slider.slick-initialized{}
-/* Слайдер с точками */
+/* Слайдер з точками */
 .slick-slider.slick-dotted{}
-/* Ограничивающая оболочка */
+/* границя */
 .slick-list {
     overflow: hidden;
 }
-/* Лента слайдов */
+/* Лента слайдів */
 .slick-track{
     display: flex;
+    /* притисне наші слайди до верху */
+    align-items: flex-start;
 }
 /* Слайд */
 .slick-slide{}
-/* Слайд активный (показывается) */
+/* Слайд активний (показується) */
 .slick-slide.slick-active{}
-/* Слайд основной */
+/* Слайд основний */
 .slick-slide.slick-current{}
 /* Слайд по центру */
 .slick-slide.slick-center{}
-/* Клонированный слайд */
-.slick-slide.slick-cloned{}
-/* Стрелка */
+/* Стрілка */
 .slick-arrow{}
 
-/* Стрелка вправо */
+/* Стрілка вправо */
 .slick-arrow.slick-next{}
-/* Стрелка не активная */
+/* Стрілка не активна */
 .slick-arrow.slick-disabled{}
-/* Точки (булиты) */
-.slick-dots{}
-.slick-dots li{}
-.slick-dots button{}
-/* Активная точка */
+
+/* Активна точка */
 .slick-dots li.slick-active{}
-/* Элемент точки */
+/* Елемент точки */
 .slick-dots li button{}
-
-
 
 
 /* конкретний слайдер */
@@ -76,15 +71,56 @@ html,body {
     width: 30px;
     height: 40px;
 }
-/* Стрелка влево */
+/* Стрілка вліво */
 .slider .slick-arrow.slick-prev{
     left: 0;
-    background: url('/img/right-arrow-icon.png') 0 0 / 100% no-repeat;
+    background: url('/img/left.png') 0 0 / 100% no-repeat;
 }
 /* Стрелка вправо */
 .slider .slick-arrow.slick-next{
     right: 0;
     background: url('/img/right-arrow-icon.png') 0 0 / 100% no-repeat;
 }
+/* відключаємо кнопочку, коли перемотка закінчилася */
+.slider .slick-arrow.slick-disabled{
+    opacity: 0,2;
+}
+/* Точки (буліти) */
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    list-style: none;
+    /* відстань між точками */
+    margin: 0px 5px; 
+}
+/* робимо точки без надпису, білі та круглі+ширина та висота */
+.slider .slick-dots button{
+    font-size: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+/* робимо активну точку прозорою */
+.slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+/* вирівнюємо всі стилі */
+ .slider__item {
+    /* плавний ефект переходу */ 
+    transition: all 0.3 ease 0s; 
+    /* забираємо прозорість слайдів */
+    opacity: 0.4;
+    text-align: center; 
+    height: 225px; 
+} 
+/* першому слайду забираємо прозорість */ 
+ .slider__item.slick-center {
+    opacity: 1;
+}
 
-.slider__item {}
+
