@@ -1,1 +1,1 @@
-# my-clider
+# my-slider
